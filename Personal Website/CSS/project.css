@@ -1,0 +1,81 @@
+.manager {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ 
+  }
+@media (min-width: 481px) {
+  .manager {
+    width: 100%;
+  margin: auto}
+
+  }
+  
+  .box {
+    background-color: wheat;
+    width: 100%;
+    height: 100%;
+    animation-name: boxExpand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+  }
+  
+ 
+  @keyframes boxExpand {
+        from {
+          transform: scale(0); /* Start at 0 scale (centered, invisible) */
+          background-color: wheat;
+        }
+        to {
+          transform: scale(1); /* Scale to full size (200px x 200px) */
+     
+        }
+  }
+  
+  .snippet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(131, 126, 126, 0.69); /* Light gray shade */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay-text {
+    color: rgb(219, 219, 53);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;  
+    font-family: "Poppins";
+
+  }
+  .overlay-text a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+  }
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
